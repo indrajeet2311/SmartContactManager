@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+<html  lang="en"xlmns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+
+
+<head>
+<meta charset="UTF-8"/>
+<title>this is the home page</title>
+
+<style>
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<section>
+<div class="container">
+      <form class="form-signin" th:action="@{/doLogin}"  method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p >
+          <label for="username" class="sr-only">Username</label>
+          <input style="width:50%" type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+        </p>
+        <p>
+          <label for="password" class="sr-only">Password</label>
+          <input style="width:50%" type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        
+        
+        
+        <a style="margin-left: 100px;" th:href="@{/forgot}">Forgot Password ? </a>
+        
+       
+        
+      </form>
+</div>
+</section>
+
+</body>
+
+
+</html>
